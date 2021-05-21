@@ -1,0 +1,298 @@
+:root {
+    --primary-color: rgb(221, 26, 26);
+    --dark-color: #141414;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: black;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    color: white;
+    text-align: center;
+}
+h2 {
+    margin-bottom: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding-top: 5px;
+}
+
+img {
+    width: 100%;
+}
+
+.showcase {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+	background: url('https://www.myanmore.com/wp-content/uploads/2019/05/netflix-background-9.jpg') no-repeat center center/cover;
+    border-bottom: 5px solid #222;
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0, 0.6);   
+}
+
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+}
+
+.showcase-top img {
+    width: 160px;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-top a {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+}
+
+.showcase-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+.showcase-content-middle {
+    margin-bottom: 1rem;
+}
+
+.showcase-content-b {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    border-bottom: 5px solid #222;
+}
+
+.showcase-content-b>h2 {
+    margin-bottom: 4rem;
+}
+
+.showcase-content h1 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin-bottom: 0 0 2rem;
+}
+
+.showcase-content p {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+}
+
+/* Containers */
+.container {
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 32px;
+}
+
+/* text styles */
+.text-xl {
+    font-size: 50px;
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+
+.text-lg {
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-dark {
+    color: #999;
+}
+
+/* Tabs */
+.tabs {
+    background: var(--dark-color);
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
+}
+
+.tabs .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tabs p {
+    font-size: 1.2rem;
+    padding-top: 16px;
+}
+
+.tabs .container > div {
+    padding: 1.5rem;
+}
+
+.tabs .container > div:hover {
+    color: rgb(177, 169, 169);
+    cursor: pointer;
+}
+
+.tab-content {
+    border-bottom: 5px solid #222;
+    padding: 3rem 0;
+    background: black;
+    color: #fff;
+}
+
+#tab-1-content .tab-1-content-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#tab-2-content .tab-2-content-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#tab-3-content .tab-3-content-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 6rem;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: white;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: opacity 0.2s ease-in;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0, 0.45);
+    border-radius: 2px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+#email {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+    margin: 0;
+    text-align: left;
+}
+
+.btn-xl {
+    font-size: 1.625rem;
+    padding: 1rem 2.1rem;
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
+
+
+/* Tables */
+.footer {
+    max-width: 75%;
+    margin: 16px auto;
+    overflow: auto;
+}
+
+.footer, .footer a {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li:hover {
+    text-decoration: underline;
+    color: #999;
+}
+
+
